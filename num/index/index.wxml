@@ -1,0 +1,83 @@
+  <!--num/index/index.wxml-->
+<scroll-view class='viewTop'>
+<view class='top'>
+  <!-- input标签绑定bindinput事件，每当搜索框改变数据时就会触发函数调用 -->
+    <view class='form'>
+        <input type='text' id='inp' bindinput='bindKeyInput'></input>
+        <!-- 点击搜索按钮触发search函数将input里的内容作为搜索关键字，调用api搜索 -->
+        
+        <view class='btn' bindtap='search'>
+          <image src='images/play/search.png'></image>
+        </view>
+    </view>
+
+  </view>
+</scroll-view>
+  
+
+<scroll-view class='one' scroll-y='true'>
+  
+  <!-- 将搜索到的歌曲名字循环输出到页面 -->
+  <view wx:if='{{ list }}'>
+    <view class='list' wx:for='{{ list }}'>
+      <view class='wrap' catchtap='change'  data-name='{{ musicNames[index] }}' data-author='{{ author[index] }}'  data-icon='{{ musicIcon[index] }}' data-url='{{ musicURIs[index] }}'  data-index='{{ index }}'>
+        <view class='wrap80'>
+          <text class='ming' > {{ musicNames[index] }}
+          </text>
+          <text  class='author' >{{ author[index] }}</text>
+        <image src='{{ musicIcon[index] }}'></image>
+        </view> 
+      </view>
+    </view>
+
+    <view class='kong'></view>
+  </view>
+</scroll-view>
+<!-- 将搜索到的歌曲名字循环输出到页面 结束-->
+
+
+<!-- 固定底部控制 -->
+<view class='bottom' catchtap='nowPlay' >
+  <view class='wrap2'>
+      <image class='bAuthor' src='{{ imgUrl }}'></image>
+  <view class='bRight' >
+      <view class='bText'>
+        <text class='Text1'>{{ songName }}</text>
+        <text class='Text2'>{{ songer }}</text>
+      </view>
+      <view class='bImg'>
+          <image class='img3' src='../../../images/play/list.png'></image>
+
+          <image class='img2' src='../../../images/play/Next.png'></image>
+
+          <image class='img1' catchtap='pause'  wx:if='{{ isPlay }}' src='../../images/play/play0.png'></image>
+          <image class='img2' wx:else src='../../../images/play/play1.png' catchtap='play'></image>
+          
+          
+      </view>
+      
+  </view>
+
+  </view>
+</view>
+
+<!-- 固定底部控制结束 -->
+
+<!-- 固定的列表 -->
+<view class='mask' style='display:none'>
+  <scroll-view class='musicList' scroll-y='true' scroll-top='50'>
+    <view class='listItem' wx:for='{{ musicNames }}'>
+      <text class='listIndex'>{{ index + 1}}</text>
+      <text class='listName'>{{ musicNames[index] }}</text>
+    </view>
+
+  </scroll-view>
+</view>
+<!-- 固定的列表结束 -->
+
+
+
+
+
+
+

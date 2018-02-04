@@ -1,0 +1,19 @@
+{
+  "pages": [
+
+    "pages/index/index",
+        "pages/list/list",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/paly/paiy",
+    "pages/num/index/index",
+    "pages/num/bendi/bendi",
+    "pages/template/tracks"
+  ],
+  "window": {
+    "backgroundTextStyle": "#374FAF",
+    "navigationBarBackgroundColor": "#374FAF",
+    "navigationBarTitleText": "音乐世界",
+    "navigationBarTextStyle": "#fff"
+  }
+}

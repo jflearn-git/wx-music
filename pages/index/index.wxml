@@ -1,0 +1,157 @@
+<!--pages/index/index.wxml-->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">榜单</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">搜索</view>  
+</view>   
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight*(750/winWidth) - 84}}rpx"
+ bindchange="bindChange">  
+    <!-- 榜单开始 -->
+    <swiper-item class='list'>
+      <scroll-view style='height:100%' scroll-y='true'>
+           <!-- 轮播图开始   -->
+        <view class='box'>
+          <view class='slider'    >       
+               <image wx:for='{{ arr }}' src='{{ imgSrc[index] }} ' mode='aspectFit' style='width:{{item.width}};top:{{item.top}};left:{{item.left}};opacity:{{item.opacity}};z-index:{{item.z}};id:{{item.id}};right:{{ item.right }}; position: absolute; height:340rpx; transition:all 1s; border-radius:5%'>
+               </image>     
+          </view>
+        </view>
+    <!-- 轮播图结束 -->
+    <!-- 最新音乐开始 -->
+    <view class='newMusic'>
+      <view class='newMusicTitle'>
+        <text>最新音乐</text>
+      </view>
+      <view class='tracks'>
+        <view wx:for='{{ hot.data1 }}'  bindtap='read' data-list='{{item.id}}'>
+          <image src='{{ item.listImg }}' mode='aspectFit'></image>
+          <text>{{ item.author }}</text>
+        </view>       
+      </view>
+    </view>
+<!-- 最新音乐结束 -->
+
+<!-- 热门歌单 -->
+  <view class='newMusic'>
+      <view class='newMusicTitle'>
+        <text>热门歌单</text>
+      </view>
+       <view class='tracks'>
+        <view wx:for='{{ hot.data2 }}'  bindtap='read' data-list='{{item.id}}'>
+          <image src='{{ item.listImg }}' mode='aspectFit'></image>
+          <text>{{ item.author }}</text>
+        </view>       
+      </view>
+      <view class='tracks'>       
+       <view wx:for='{{ hot.data5 }}'  bindtap='read' data-list='{{item.id}}'>                      <image src='{{ item.listImg }}' mode='aspectFit'></image>
+          <text>{{ item.author }}</text>
+        </view>        
+      </view>
+    </view>
+<!-- 热门歌单结束 -->
+
+<!-- 主题歌单欧美电音开始 -->
+<view class='newMusic'>
+      <view class='newMusicTitle'>
+        <text>主题歌单 欧美电音</text>
+      </view>
+     <view class='tracks'>
+        <view wx:for='{{ hot.data3 }}'  bindtap='read' data-list='{{item.id}}'>
+          <image src='{{ item.listImg }}' mode='aspectFit'></image>
+          <text>{{ item.author }}</text>
+        </view>     
+      </view>
+      <view class='tracks'>
+        <view wx:for='{{ hot.data4 }}'  bindtap='read' data-list='{{item.id}}'>
+          <image src='{{ item.listImg }}' mode='aspectFit'></image>
+          <text>{{ item.author }}</text>
+        </view>
+        
+      </view>
+    </view>
+<!-- 主题歌单欧美电音结束 -->
+
+
+<!-- 精选专题开始 -->
+<view class='newMusicTitle'>
+        <text>精选专题</text>
+</view>
+<view class='subject'>
+    <view class='story' wx:for='{{hot.data4}}'   bindtap='read' data-list='{{item.id}}'>
+      <view>
+        <text class='storyTitle'> {{item.author}}</text>
+        <text class='storyTime'>12:24</text>
+      </view>
+      <image src='{{ item.listImg}}'  mode='aspectFit'></image>
+    </view>  
+</view>
+
+<!-- 精选专题结束 -->
+   
+    <!-- 榜单结束 -->
+      </scroll-view>
+    </swiper-item>  
+    <!-- 搜索开始 -->
+    <swiper-item  >
+      <scroll-view  class='dd' style='height:100%;width:100%' scroll-y='true'>
+            <!--num/index/index.wxml-->
+            <navigator class='nav'  url="../num/index/index">点击跳转搜索</navigator>
+          
+      </scroll-view>
+    </swiper-item>  
+    <!-- 搜索结束 -->
+</swiper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

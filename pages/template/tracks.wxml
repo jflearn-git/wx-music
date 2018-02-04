@@ -1,0 +1,7 @@
+<!--pages/template/tracks.wxml-->
+<view class='tracks'>
+    <view wx:for='{{ hot.data2 }}'  bindtap='read' data-list='{{item.id}}'>
+      <image src='{{ item.listImg }}' mode='aspectFit'></image>
+       <text>{{ item.author }}</text>
+    </view>       
+</view>

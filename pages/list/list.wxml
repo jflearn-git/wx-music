@@ -1,0 +1,87 @@
+<!--pages/list/list.wxml-->
+<view>
+    <!-- 个人大图开始 -->
+          <view class='banner'>
+            <image src='{{id.url}}' mode='aspectFill' style='height:456rpx; width:100%' ></image>
+            <view class='banner-content'>
+              <view class='author'>
+              <text class='name'>{{id.name}}</text>
+              <text class='number'>粉丝:9999</text>
+              </view>
+              <view class='concern'>按钮占位</view>
+            </view>
+          </view>
+     <!-- 个人大图结束    -->
+     <!-- tab选项卡开始 -->
+          <view class="swiper-tab">  
+              <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">单曲</view>  
+              <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">专辑</view>  
+                <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">MV</view>  
+              <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">详情</view> 
+          </view> 
+    <!-- tab选项卡结束 -->
+        <view class='contents'>
+        <!-- 单曲列表开始 -->
+          <view class='danqu' wx-if='{{currentTab==0}}'>
+            <block wx:for='{{ songer }}'>
+              <view class='gequlibiao'>
+                    <text class='iconfont icon-yinle3' style='font-size:35rpx;color:red'></text>
+                    <view>
+                      <text>{{item}}</text>
+                      <text class='authorNow'>{{id.name}}</text>
+                    </view>
+                    <view style='position:absolute;right:12rpx'>...</view>
+              </view>
+            </block>
+          </view>
+       <!-- 单曲列表结束 -->
+
+       <!-- 专辑开始 -->
+          <view class='cd' wx-if='{{currentTab==1}}'>
+          <block wx:for='{{ cd }}'>
+              <view class='gequlibiao'>
+                  <image src='{{ item.url }}' style='width:100rpx;height:100rpx'></image>
+                    <view style='padding-left:20rpx'>
+                      <text style='text-overflow:ellipsis;width:520rpx;overflow:hidden; white-space:nowrap;' >{{item.time}}</text>
+                      <text class='authorNow'>{{ item.name }}</text>
+                    </view>
+              </view>
+            </block>
+          </view>
+        <!-- 专辑结束 -->
+
+        <!-- mv开始 -->
+          <view class='mv' wx-if='{{currentTab==2}}'>
+          <block wx:for='{{ mv }}'>
+              <view class='gequlibiao'>
+                  <image src='{{ item.url }}' style='width:320rpx;height:140rpx'></image>
+                    <view style='padding-left:20rpx'>
+                      <text style='text-overflow:ellipsis;width:480rpx;overflow:hidden; white-space:nowrap;' >{{item.name}}</text>
+                      <text class='authorNow'>{{ item.number }}</text>
+                    </view>     
+              </view>
+            </block>
+          </view>
+        <!-- mv结束 -->
+
+        <!-- 个人详情开始 -->
+          <view class='xiangqing' wx-if='{{currentTab==3}}'>
+            <view class='jieshao'>
+            <text>{{info.recommend}}</text>
+            <view class='quan'>
+                <text>歌手资料></text> 
+            </view>
+            </view>
+          <view style='height:30rpx;background:#888;width:100%'></view>
+          <!-- 相似歌手 -->
+            <view class='jieshao'>
+              <text style='color:#abcdef;font-size:50rpx'>相似歌手</text>
+            </view>
+          </view>
+        </view>
+        <!-- 个人详情结束 -->
+</view>
+
+
+
+

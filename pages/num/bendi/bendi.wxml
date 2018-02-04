@@ -1,0 +1,37 @@
+<!--num/bendi/bendi.wxml-->
+<!--pages/news/news.wxml-->
+
+<image class='bg ' src='{{ imgBg }}' mode='aspectFill'></image>
+<view class='nexttu'>
+    <image src='../../images/icon/change.png' bindtap='nexttu' mode='aspectFill'></image>
+
+</view>
+
+<view class='wrapBg'>
+      <view class='wrap' style='top:{{ moveTop }}rpx'>
+        <view wx:for='{{ lrcArr }}'>
+        <!-- 三目运算符 -->
+           <text id='{{ item[0] }}' data-id='{{ changeColor }}' class='{{ item[0]==changeColor? "lrcActive": "" }}'>{{ item[1] }}</text>
+        </view>
+      </view>
+</view>
+
+
+<!-- 进度条 -->
+
+<view class='progres'>
+<text class='now'>{{ nowTime }}</text>
+<slider value='{{ currentTime }}' max='{{ duration }}'  bindchange="slider"></slider>
+<text class='end'>{{ endTime }}</text>
+</view>
+
+ <!-- transform: rotate(0deg) scale(1) translate(75%,0%);  
+ -webkit-transform: rotate(0deg) scale(1) translate(75%,0%);   -->
+
+         
+<!-- <view class='box'> 
+  <audio poster="{{musicIcon}}" name="{{musicName}}" author="{{author}}" wx:if='{{musicURI}}' src="{{musicURI}} " id="myAudio" controls loop></audio>
+</view> -->
+
+
+

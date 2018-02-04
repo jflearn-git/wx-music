@@ -1,0 +1,135 @@
+page{
+  width: 100%;
+  height: 100%
+}
+ @import './icon.wxss'; 
+/* 人物详情 */
+.banner{
+   position: relative; 
+}
+.banner .banner-content{
+  position: absolute;
+  bottom: 20rpx;
+  width: 92%;
+  left: 4%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  color: whitesmoke
+}
+.banner .author{
+  display: flex;
+  flex-direction: column
+}
+
+.banner .number{
+font-size: 33rpx
+}
+
+/* 人物详情结束 */
+/* top选项卡开始 */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    text-align: center;  
+    line-height: 80rpx;
+    }  
+.swiper-tab-list{ 
+    font-size: 30rpx;  
+    display: inline-block;  
+    width: 25%;  
+    color: #777777;  
+}  
+.on{ color: #374FAF;  
+    border-bottom: 5rpx solid #374FAF;
+    }  
+/* top选项卡结束 */
+
+/* //内容页开始 */
+.contents view{
+
+
+}
+
+/* //内容页结束 */
+.danqu view{
+  text-indent: 20rpx;
+  font-size: 36rpx
+}
+.danqu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gequlibiao{
+  position: relative;
+  height: 120rpx;
+  width: 94%;
+  display: flex;
+  align-items: center;
+  border-bottom:1rpx solid #999; 
+}
+.gequlibiao view{
+  display: flex;
+  flex-direction: column;
+
+}
+.authorNow{
+  font-size: 28rpx;
+  color: #777777
+}
+
+.zhaunji{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mv .gequlibiao{
+  position: relative;
+  height: 150rpx;
+  width: 94%;
+  display: flex;
+  align-items: center;
+  border-bottom:1rpx solid #999; 
+}
+
+
+/* //详情 */
+.xiangqing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.jieshao{
+  width: 94%;
+}
+.jieshao text{
+  font-size: 30rpx;
+  font-weight: 300
+}
+.quan{
+  display: flex;
+  justify-content: center;
+}
+.quan text{
+  font-size: 38rpx;
+  color: skyblue;
+  margin-top: 30rpx
+}
+scroll-view{
+  z-index: 999;
+  position: fixed;
+  bottom: 0rpx
+  
+}

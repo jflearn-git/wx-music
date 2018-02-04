@@ -1,0 +1,209 @@
+/* num/index/index.wxss */
+/* 整体第一层 */
+.kong{
+  width: 100rpx;
+  height: 100rpx
+}
+
+.viewTop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.one{
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top:80rpx;
+  z-index: -1;
+}
+/* 整体第一层 */
+.box{
+  display: flex;
+  justify-content: center;
+}
+.top{
+  width: 100%;
+  height: 50rpx;
+  padding: 15rpx 0;
+  background: #e4e4e4;
+  display: flex;
+  justify-content: center;
+}
+.form{
+  position: relative;
+  width: 86%;
+  height: 50rpx;
+  display: flex;
+  /* text-align: center; */
+  border: 1rpx solid #999;
+  border-radius: 50rpx;
+}
+#inp{
+  width: 86%;
+  border: 0;
+  /* background: white; */
+  border-radius:5rpx; 
+   margin-left:20rpx;
+   height: 20rpx;  
+/* border: 1px solid #999; */
+
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blanchedalmond;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius:0 50rpx 50rpx 0; 
+  height: 50rpx;
+  width: 100rpx;
+}
+.btn image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.ming{
+  width: 80%;
+  overflow: hidden;
+  font-size: 36rpx;
+
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100rpx;
+  padding:5rpx 0 5rpx 0;
+  
+}
+.wrap80{
+  position: relative;
+  border-bottom: 1px dotted #abcdef;
+
+  width: 86%;
+  height: 100%;
+}
+.wrap image{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 0;
+  top: 0rpx;
+  
+}
+.author{
+  color: #abcdef;
+  font-size: 30rpx
+}
+
+/* 底部歌曲 */
+.bottom{
+  background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  border-top:1px solid #999; 
+  justify-content: center;
+}
+.bAuthor{
+  margin-top: 8rpx;
+  width: 120rpx;
+  height: 100rpx;
+  border-radius:100rpx;
+  border: 1px solid #999 
+}
+.bRight{
+  display: flex;
+  width: 100%;
+}
+.bText{
+  height: 100rpx;
+  width: 50%;
+  display: flex;
+  margin-left: 26rpx;
+  flex-direction: column;
+  /* align-items: center; */
+   justify-content: center; 
+  
+}
+.Text1{
+  font-size: 32rpx
+}
+.Text2{
+  font-size: 25rpx;
+  color: #abcdef;
+}
+.bImg{
+  
+  height: 100rpx;
+  width: 50%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.bImg image{
+
+  width: 50rpx;
+  height: 50rpx;
+  margin: 10rpx;
+}
+.wrap2{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+/* 底部歌曲结束 */
+
+/* 音乐列表开始 */
+.mask{
+  position: fixed;
+  overflow: hidden;
+  top: 250rpx;
+  left: 0;
+  background: red;
+  width: 100%;
+  height: 100%;
+}
+
+.musicList{
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  height: 500rpx;
+  z-index: 10;
+  display: flex;
+  /* justify-content: center;  */
+  align-items: center;
+  background: #abcdef;
+  width: 100%;
+
+  
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.listItem{
+  width: 100%;
+  display: flex;
+  flex-direction: row
+}
+
+.listIndex{
+  width: 20%;
+
+}
+.listName{
+  width: 80%;
+}
+/* 音乐列表结束 */

@@ -1,0 +1,95 @@
+/* num/bendi/bendi.wxss */
+page{
+  overflow: hidden;
+}
+.box{
+  display: flex;
+  justify-content: center;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 改变图片的按钮 */
+
+.nexttu{
+  z-index: 999;
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top:40rpx;
+  right: 30rpx;
+}
+.nexttu image{
+   width: 100%;
+  height: 100%; 
+}
+/* //歌词布局 */
+
+.wrapBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+
+}
+/* //包在歌词外的外壳 */
+.wrap{
+  transition: all 1s;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.wrap view{
+  height: 80rpx;
+}
+.wrap text{
+    font-size: 35rpx;
+    color: #999;
+    height: 60rpx;
+    line-height: 60rpx
+
+}
+.wrap  .lrcActive{
+  font-size: 45rpx;
+  color: lightsalmon;
+}
+
+
+
+/* 进度条的制作 */
+.progres{
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+
+}
+.progres text{
+ 
+ 
+}
+.progres slider{
+  width: 70%;
+}
+.now{
+  width: 15%;
+}
+.end{
+    width: 15%;
+   
+}
+
+/* 进度条制作结束 */
